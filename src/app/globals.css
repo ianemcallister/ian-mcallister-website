@@ -25,3 +25,21 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* styles.css or globals.css */
+h1 {
+  @apply text-4xl font-bold mt-4 mb-2; /* Example Tailwind CSS styles */
+}
+
+h2 {
+  @apply text-3xl font-semibold mt-4 mb-2;
+}
+
+ul {
+  @apply list-disc list-inside mt-2 mb-4; /* Tailwind list styles */
+}
+
+li {
+  @apply ml-4; /* Adjust margin for bullet points */
+}

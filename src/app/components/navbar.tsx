@@ -12,7 +12,11 @@ export default function NavBar() {
   return (
     <nav className="bg-gray-800 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-lg font-bold">Ian McAllister</div>
+          <div className="text-lg font-bold">
+            <Link key='head' href="/">
+              Ian McAllister
+            </Link>
+          </div>
           <div className="hidden md:flex space-x-4">
             {["Engineering", "Product", "Blog", "Podcast", "Talks"].map((item) => (
               <Link key={item} href={`/${item.toLowerCase()}`} className="hover:underline">

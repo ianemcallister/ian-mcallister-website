@@ -1,21 +1,24 @@
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link';
 import matter from 'gray-matter';
+import Link from 'next/link';
+import BlogLayout from './layout'; // Import the BlogLayout
+import style from './styles.module.css';
 
 const postsDirectory = path.join(process.cwd(), 'src/content');
 
 async function getAllPosts() {
   const filenames = fs.readdirSync(postsDirectory);
-
   return filenames.map((filename) => {
     const fullPath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
-
     return {
-      slug: filename.replace(/\.md$/, ''), // remove the .md extension
-      frontmatter: data,
+      slug: filename.replace(/\.md$/, ''),
+      frontmatter: {
+        ...data,
+        // You can add more fields if necessary
+      },
     };
   });
 }
@@ -24,27 +27,32 @@ export default async function BlogPage() {
   const posts = await getAllPosts();
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-5xl font-bold mb-10 text-center">Blog</h1>
-      <ul className="space-y-8">
-        {posts.map((post) => (
-          <li key={post.slug} className="border-b border-gray-200 pb-4">
-            <Link href={`/blog/${post.slug}`} className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition duration-300">
-              {post.frontmatter.title}
-            </Link>
-            <p className="text-sm text-gray-500 mt-2">
-              {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </p>
-            <p className="text-lg text-gray-700 mt-2">
-              {post.frontmatter.description}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <BlogLayout>
+      <div className="container mx-auto p-4">
+        <h1 className="text-3xl font-bold mb-6">Blog</h1>
+        <ul className="list-none">
+          {posts.map((post) => (
+            <li key={post.slug} className="mb-4 flex">
+              {post.frontmatter.image && (
+                <div className="w-1/3 pr-4"> {/* Left column for the image */}
+                  <img 
+                    src={post.frontmatter.image} 
+                    alt={post.frontmatter.title} 
+                    className="w-full h-auto mb-2 rounded-lg" // Add styles as needed
+                  />
+                </div>
+              )}
+              <div className="w-2/3"> {/* Right column for text */}
+                <Link href={`/blog/${post.slug}`} className="text-xl font-semibold">
+                  {post.frontmatter.title}
+                </Link>
+                <p className="text-gray-500">{post.frontmatter.date}</p>
+                <p>{post.frontmatter.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </BlogLayout>
   );
 }
