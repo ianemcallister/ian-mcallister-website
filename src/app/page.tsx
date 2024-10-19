@@ -38,6 +38,16 @@ const Home: React.FC = () => {
           <input type="email" placeholder="Your Email" className="mt-4 p-2 border rounded" />
           <button className="ml-2 p-2 bg-blue-600 text-white rounded">Subscribe</button>
         </div>
+
+        {/* Let's Connect */}
+        <div className="my-8 p-6 bg-gray-100 text-center rounded-lg">
+          <h2 className="text-2xl font-semibold">Let's Connect</h2>
+          <p className="mt-2">It's always good to be in touch.</p>
+          <Link href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" className="text-blue-600 hover:underline">
+            Visit my LinkedIn
+          </Link>
+        </div>
+        
       </main>
     </div>
   );

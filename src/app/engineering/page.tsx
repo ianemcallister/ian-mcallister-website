@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link"; // Import Next.js Link component
 
 const EngineeringPage: React.FC = () => {
   return (
@@ -64,6 +65,16 @@ const EngineeringPage: React.FC = () => {
             </ul>
           </section>
 
+          {/* Spotlight Section */}
+          <section className="my-8">
+            <h2 className="text-3xl font-semibold mb-4">Spotlight</h2>
+            <p>
+              This is the capstone project of my recently completed AI
+              developer bootcamp completed through <a href="https://www.learncodinganywhere.com/" className="text-blue-500 underline">The Tech Academy</a>
+            </p>
+            <Link href='/spotlight' key='spotlight'></Link>
+          </section>
+
           {/* Web Development Section */}
           <section className="my-8">
             <h2 className="text-3xl font-semibold mb-4">Web Development</h2>
@@ -94,15 +105,42 @@ const EngineeringPage: React.FC = () => {
               <li>Using libraries like TensorFlow and scikit-learn</li>
             </ul>
           </section>
+
+          {/* Portfolio Section */}
+          <section className="my-8">
+            <h2 className="text-3xl font-semibold mb-4">Portfolio</h2>
+            <p>
+              Here are some of the programming languages and technologies I've worked with. This section highlights my proficiency in various languages across different projects.
+            </p>
+
+            {/* Full Bleed Horizontally Scrolling Section */}
+            <div className="relative overflow-x-auto py-4 w-screen ml-[calc(-50vw+50%)]">
+              <div className="flex space-x-4 w-[200%]">
+                {/* Language Tiles with Links and Images */}
+                {[
+                  { name: "JavaScript", imgSrc: "/assets/images/javascript.png", url: "/engineering/portfolio/javascript" },
+                  { name: "TypeScript", imgSrc: "/assets/images/typescript.png", url: "/engineering/portfolio/typescript" },
+                  { name: "Python", imgSrc: "/assets/images/python.png", url: "/engineering/portfolio/python" },
+                  { name: "R", imgSrc: "/assets/images/r.png", url: "/engineering/portfolio/r" },
+                  { name: "PHP", imgSrc: "/assets/images/php.png", url: "/engineering/portfolio/php" },
+                  { name: "C++", imgSrc: "/assets/images/cplusplus.png", url: "/engineering/portfolio/cplusplus" },
+                ].map((language) => (
+                  <Link href={language.url} key={language.name}>
+                    <div
+                      className="min-w-[250px] h-[400px] bg-cover bg-center rounded-lg shadow-lg flex items-center justify-center text-xl font-semibold text-white"
+                      style={{ backgroundImage: `url(${language.imgSrc})` }}
+                    >
+                      <div className="bg-black bg-opacity-50 w-full h-full flex items-center justify-center rounded-lg">
+                        {language.name}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white p-4">
-        <div className="container mx-auto flex flex-col items-center">
-          <p className="mt-4 text-sm">&copy; {new Date().getFullYear()} Ian McAllister. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };
