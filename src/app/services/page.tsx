@@ -52,7 +52,7 @@ const Services = () => {
           <li>DevOps implementation and CI/CD pipeline setup for scalable infrastructure</li>
         </ul>
         <p className="mt-4">
-          I've partnered with businesses of all sizes—from startups to established tech companies—
+          I&apos;ve partnered with businesses of all sizes—from startups to established tech companies—
           and bring a proven record of delivering products that align with user needs and business goals.
         </p>
       </section>

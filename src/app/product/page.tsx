@@ -58,7 +58,7 @@ const ProductPage: React.FC = () => {
                 />
                 <div className="p-4">
                   <h3 className="text-2xl font-semibold">Product 1</h3>
-                  <p className="text-gray-500">This is a description of Product 1. It's a game-changing solution for modern businesses.</p>
+                  <p className="text-gray-500">This is a description of Product 1. It&apos;s a game-changing solution for modern businesses.</p>
                   <Link href="/products/product-1" className="text-blue-500 mt-4 inline-block">
                     Learn More
                   </Link>
@@ -124,30 +124,6 @@ const ProductPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Testimonials Section */}
-          <section className="my-8">
-            <h2 className="text-3xl font-semibold mb-4">What Our Customers Say</h2>
-            <div className="flex flex-wrap space-x-8">
-              {/* Testimonial 1 */}
-              <div className="bg-gray-100 p-6 rounded-lg shadow-lg w-full sm:w-[30%]">
-                <p className="italic">"This product revolutionized the way we operate. It's intuitive, easy to integrate, and has boosted our productivity."</p>
-                <h4 className="font-semibold mt-4">John Doe</h4>
-                <p className="text-gray-500">CEO, Company XYZ</p>
-              </div>
-              {/* Testimonial 2 */}
-              <div className="bg-gray-100 p-6 rounded-lg shadow-lg w-full sm:w-[30%]">
-                <p className="italic">"An essential tool for our team. The seamless experience and robust features make it a must-have for our workflow."</p>
-                <h4 className="font-semibold mt-4">Jane Smith</h4>
-                <p className="text-gray-500">Product Manager, ABC Corp</p>
-              </div>
-              {/* Testimonial 3 */}
-              <div className="bg-gray-100 p-6 rounded-lg shadow-lg w-full sm:w-[30%]">
-                <p className="italic">"The product has helped us scale and grow faster than we ever thought possible. Highly recommend!"</p>
-                <h4 className="font-semibold mt-4">Alice Johnson</h4>
-                <p className="text-gray-500">Lead Developer, Tech Solutions</p>
-              </div>
-            </div>
-          </section>
         </div>
       </main>
     </div>)

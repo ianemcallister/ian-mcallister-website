@@ -2,8 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Image from "next/image";
 import BlogLayout from './layout'; // Import the BlogLayout
-import style from './styles.module.css';
+//import style from './styles.module.css';
 
 const postsDirectory = path.join(process.cwd(), 'src/content');
 
@@ -35,10 +36,14 @@ export default async function BlogPage() {
             <li key={post.slug} className="mb-4 flex">
               {post.frontmatter.image && (
                 <div className="w-1/3 pr-4"> {/* Left column for the image */}
-                  <img 
-                    src={post.frontmatter.image} 
-                    alt={post.frontmatter.title} 
-                    className="w-full h-auto mb-2 rounded-lg" // Add styles as needed
+                  <Image
+                    src={post.frontmatter.image}
+                    alt={post.frontmatter.title}
+                    className="w-full h-auto mb-2 rounded-lg"
+                    width={800} // Replace with the actual width of your image or desired display width
+                    height={450} // Replace with the actual height of your image or desired display height
+                    layout="responsive" // Optional: This makes the image responsive
+                    objectFit="cover" // Optional: This controls how the image is resized (cover, contain, etc.)
                   />
                 </div>
               )}

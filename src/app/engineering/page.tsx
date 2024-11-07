@@ -110,7 +110,7 @@ const EngineeringPage: React.FC = () => {
           <section className="my-8">
             <h2 className="text-3xl font-semibold mb-4">Portfolio</h2>
             <p>
-              Here are some of the programming languages and technologies I've worked with. This section highlights my proficiency in various languages across different projects.
+              Here are some of the programming languages and technologies I&apos;ve worked with. This section highlights my proficiency in various languages across different projects.
             </p>
 
             {/* Full Bleed Horizontally Scrolling Section */}

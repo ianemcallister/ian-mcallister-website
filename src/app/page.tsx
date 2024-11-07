@@ -1,11 +1,11 @@
 "use client"; // This line ensures the component is treated as a client component
 
-import Image from "next/image";
-import { useState } from "react";
+//import Image from "next/image";
+//import { useState } from "react";
 import Link from "next/link";
 import Head from 'next/head'; 
-import heroshot from '../../public/assets/images/headshot.jpg';
-import styles from './styles.module.css';
+//import heroshot from '../../public/assets/images/headshot.jpg';
+//import styles from './styles.module.css';
 
 const Home: React.FC = () => {
   return (
@@ -41,8 +41,8 @@ const Home: React.FC = () => {
 
         {/* Let's Connect */}
         <div className="my-8 p-6 bg-gray-100 text-center rounded-lg">
-          <h2 className="text-2xl font-semibold">Let's Connect</h2>
-          <p className="mt-2">It's always good to be in touch.</p>
+          <h2 className="text-2xl font-semibold">Let&apos;s Connect</h2>
+          <p className="mt-2">It&apos;s always good to be in touch.</p>
           <Link href="https://www.linkedin.com/in/ianemcallister/" target="_blank" className="text-blue-600 hover:underline">
             Visit my LinkedIn
           </Link>

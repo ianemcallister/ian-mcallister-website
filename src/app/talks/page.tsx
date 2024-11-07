@@ -109,12 +109,6 @@ export default async function TalksPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white p-4">
-        <div className="container mx-auto flex flex-col items-center">
-          <p className="mt-4 text-sm">&copy; {new Date().getFullYear()} Ian McAllister. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }

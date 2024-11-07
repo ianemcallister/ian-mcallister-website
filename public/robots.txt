@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.ian-mcallister.com
+
+# Sitemaps
+Sitemap: https://www.ian-mcallister.com/sitemap.xml

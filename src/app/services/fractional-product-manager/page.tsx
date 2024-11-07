@@ -2,7 +2,7 @@
 
 'use client';
 
-import Image from 'next/image';
+//import Image from 'next/image';
 import Link from 'next/link';
 import CallToAction from '../../components/CallToAction';
 
@@ -14,7 +14,7 @@ const FractionalProductManager = () => {
         <div className="hero flex flex-col lg:flex-row items-center justify-between p-8 lg:p-12">
           {/* Text Content */}
           <div className="content text-center lg:text-left mb-6 lg:mb-0">
-            <span className="pre-header text-lg text-gray-600 block">Hi, I'm Ian McAllister</span>
+            <span className="pre-header text-lg text-gray-600 block">Hi, I&apos;m Ian McAllister</span>
             <h1 className="main-header text-4xl lg:text-5xl font-bold mt-2">
               Looking for a Fractional Product Manager?
             </h1>

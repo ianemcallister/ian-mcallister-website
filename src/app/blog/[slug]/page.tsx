@@ -5,6 +5,7 @@ import BlogLayout from '../../layout';
 import ClientSideComponent from './ClientSideComponent';
 import { remark } from 'remark';
 import html from 'remark-html';
+import Image from "next/image";
 import gfm from 'remark-gfm'; // Import the GFM plugin
 
 // Define the Frontmatter type
@@ -95,12 +96,15 @@ export default async function PostPage({
         
         {/* Ensure the image is rendered as expected */}
         <div className="flex justify-center mb-4 relative"> {/* Flex container to center the image with relative positioning */}
-          <img
-            src={frontmatter.image} // Ensure correct image path
+          <Image
+            src={frontmatter.image}
             alt={frontmatter.title}
-            className="max-w-full h-auto object-cover" // Allow full width with max-width
-            style={{ maxWidth: '800px' }} // Limit max width to 800px
-          />
+            className="max-w-full h-auto object-cover"
+            width={800} // Replace with the actual width of your image or desired display width
+            height={450} // Replace with the actual height of your image or desired display height
+            layout="responsive" // Optional: This makes the image responsive
+            objectFit="cover" // Optional: This controls how the image is resized (cover, contain, etc.)
+          />    
           
           {/* Display image attribution */}
           {imageAttributionHtml && (

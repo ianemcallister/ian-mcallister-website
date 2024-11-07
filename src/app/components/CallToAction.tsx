@@ -6,7 +6,7 @@ const CallToAction = () => {
   return (
     <div className="section bg-white p-8 lg:p-12 mt-8 shadow-md rounded-lg" id="contact">
       <h3 className="text-2xl font-bold text-gray-800 mb-6">
-        READY TO HIRE A FRACTIONAL PRODUCT MANAGER? LET'S MAKE IT HAPPEN.
+        READY TO HIRE A FRACTIONAL PRODUCT MANAGER? LET&apos;S MAKE IT HAPPEN.
       </h3>
       
       <div className="space-y-8">
