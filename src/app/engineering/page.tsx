@@ -19,21 +19,19 @@ const EngineeringPage: React.FC = () => {
           content="software development, web development, machine learning, programming, engineering"
         />
       </Head>
-
       {/* Banner Section */}
       <div className="relative w-full h-[60vh] sm:h-[80vh]">
         <Image
           src="/assets/images/rear-view-programmer-working-all-night-long.jpg" // Replace with your banner image path
           alt="Software Development Banner"
-          layout="fill"
-          objectFit="cover"
+          fill // Adjusted for Next.js 13+
+          style={{ objectFit: "cover" }}
           priority={true}
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white">
           <h1 className="text-5xl font-bold">Software Development</h1>
         </div>
       </div>
-
       {/* Main Content */}
       <main className="flex-grow p-4">
         <div className="container mx-auto">
@@ -72,7 +70,9 @@ const EngineeringPage: React.FC = () => {
               This is the capstone project of my recently completed AI
               developer bootcamp completed through <a href="https://www.learncodinganywhere.com/" className="text-blue-500 underline">The Tech Academy</a>
             </p>
-            <Link href='/spotlight' key='spotlight'></Link>
+            <Link href="/spotlight" className="text-blue-500 underline">
+              View Spotlight
+            </Link>
           </section>
 
           {/* Web Development Section */}

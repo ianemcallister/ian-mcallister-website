@@ -27,7 +27,7 @@ export default async function BlogPage() {
   const posts = await getAllPosts();
 
   return (
-    <BlogLayout>
+    (<BlogLayout>
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-6">Blog</h1>
         <ul className="list-none">
@@ -43,7 +43,10 @@ export default async function BlogPage() {
                 </div>
               )}
               <div className="w-2/3"> {/* Right column for text */}
-                <Link href={`/blog/${post.slug}`} className="text-xl font-semibold">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="text-xl font-semibold"
+                  legacyBehavior>
                   {post.frontmatter.title}
                 </Link>
                 <p className="text-gray-500">{post.frontmatter.date}</p>
@@ -53,6 +56,6 @@ export default async function BlogPage() {
           ))}
         </ul>
       </div>
-    </BlogLayout>
+    </BlogLayout>)
   );
 }

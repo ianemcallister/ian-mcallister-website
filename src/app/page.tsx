@@ -43,7 +43,7 @@ const Home: React.FC = () => {
         <div className="my-8 p-6 bg-gray-100 text-center rounded-lg">
           <h2 className="text-2xl font-semibold">Let's Connect</h2>
           <p className="mt-2">It's always good to be in touch.</p>
-          <Link href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" className="text-blue-600 hover:underline">
+          <Link href="https://www.linkedin.com/in/ianemcallister/" target="_blank" className="text-blue-600 hover:underline">
             Visit my LinkedIn
           </Link>
         </div>

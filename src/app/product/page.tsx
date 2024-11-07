@@ -6,7 +6,7 @@ import Link from "next/link"; // Import Next.js Link component
 
 const ProductPage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    (<div className="flex flex-col min-h-screen">
       {/* Head for metadata */}
       <Head>
         <title>Products - Ian McAllister</title>
@@ -19,7 +19,6 @@ const ProductPage: React.FC = () => {
           content="products, software products, web development, machine learning, engineering"
         />
       </Head>
-
       {/* Banner Section */}
       <div className="relative w-full h-[60vh] sm:h-[80vh]">
         <Image
@@ -33,7 +32,6 @@ const ProductPage: React.FC = () => {
           <h1 className="text-5xl font-bold">Our Products</h1>
         </div>
       </div>
-
       {/* Main Content */}
       <main className="flex-grow p-4">
         <div className="container mx-auto">
@@ -61,8 +59,8 @@ const ProductPage: React.FC = () => {
                 <div className="p-4">
                   <h3 className="text-2xl font-semibold">Product 1</h3>
                   <p className="text-gray-500">This is a description of Product 1. It's a game-changing solution for modern businesses.</p>
-                  <Link href="/products/product-1">
-                    <a className="text-blue-500 mt-4 inline-block">Learn More</a>
+                  <Link href="/products/product-1" className="text-blue-500 mt-4 inline-block">
+                    Learn More
                   </Link>
                 </div>
               </div>
@@ -78,8 +76,8 @@ const ProductPage: React.FC = () => {
                 <div className="p-4">
                   <h3 className="text-2xl font-semibold">Product 2</h3>
                   <p className="text-gray-500">This is a description of Product 2. It offers innovative solutions for everyday challenges.</p>
-                  <Link href="/products/product-2">
-                    <a className="text-blue-500 mt-4 inline-block">Learn More</a>
+                  <Link href="/products/product-2" className="text-blue-500 mt-4 inline-block">
+                    Learn More
                   </Link>
                 </div>
               </div>
@@ -95,8 +93,8 @@ const ProductPage: React.FC = () => {
                 <div className="p-4">
                   <h3 className="text-2xl font-semibold">Product 3</h3>
                   <p className="text-gray-500">This is a description of Product 3. It’s designed to optimize efficiency and performance.</p>
-                  <Link href="/products/product-3">
-                    <a className="text-blue-500 mt-4 inline-block">Learn More</a>
+                  <Link href="/products/product-3" className="text-blue-500 mt-4 inline-block">
+                    Learn More
                   </Link>
                 </div>
               </div>
@@ -108,14 +106,20 @@ const ProductPage: React.FC = () => {
             <h2 className="text-3xl font-semibold mb-4">Categories</h2>
             <p>Explore our diverse range of products tailored to meet various business needs. From SaaS solutions to data-driven applications, we have it all.</p>
             <div className="flex space-x-4 mt-4">
-              <Link href="/products/category/web-development">
-                <a className="bg-gray-800 text-white p-4 rounded-lg shadow-lg w-1/3 text-center">Web Development</a>
+              <Link
+                href="/products/category/web-development"
+                className="bg-gray-800 text-white p-4 rounded-lg shadow-lg w-1/3 text-center">
+                Web Development
               </Link>
-              <Link href="/products/category/ml">
-                <a className="bg-gray-800 text-white p-4 rounded-lg shadow-lg w-1/3 text-center">Machine Learning</a>
+              <Link
+                href="/products/category/ml"
+                className="bg-gray-800 text-white p-4 rounded-lg shadow-lg w-1/3 text-center">
+                Machine Learning
               </Link>
-              <Link href="/products/category/ai">
-                <a className="bg-gray-800 text-white p-4 rounded-lg shadow-lg w-1/3 text-center">AI Solutions</a>
+              <Link
+                href="/products/category/ai"
+                className="bg-gray-800 text-white p-4 rounded-lg shadow-lg w-1/3 text-center">
+                AI Solutions
               </Link>
             </div>
           </section>
@@ -146,7 +150,7 @@ const ProductPage: React.FC = () => {
           </section>
         </div>
       </main>
-    </div>
+    </div>)
   );
 };
 

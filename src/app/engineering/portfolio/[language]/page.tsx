@@ -67,19 +67,17 @@ const PortfolioLanguagePage = ({ params }: { params: { language: string } }) => 
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    (<div className="flex flex-col min-h-screen">
       <Head>
         <title>{language} Projects - Portfolio</title>
         <meta name="description" content={`Explore my projects in ${language}`} />
       </Head>
-
       {/* Banner Section */}
       <div className="relative w-full h-[60vh] sm:h-[80vh] bg-gray-900">
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl font-bold">Portfolio</h1>
         </div>
       </div>
-
       {/* Language Header and Summary */}
       <main className="p-4">
         <div className="container mx-auto">
@@ -120,16 +118,18 @@ const PortfolioLanguagePage = ({ params }: { params: { language: string } }) => 
               </div>
 
               {/* Link to GitHub Repository */}
-              <Link href={`https://github.com/yourusername/${selectedProjectReadme}`}>
-                <a className="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded">
+              <Link
+                href={`https://github.com/yourusername/${selectedProjectReadme}`}
+                className="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded">
+                
                   View on GitHub
-                </a>
+                
               </Link>
             </div>
           )}
         </div>
       </main>
-    </div>
+    </div>)
   );
 };
 
