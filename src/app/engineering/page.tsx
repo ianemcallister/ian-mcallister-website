@@ -63,6 +63,14 @@ const EngineeringPage: React.FC = () => {
             </ul>
           </section>
 
+          {/* Resume */}
+          <section className="my-8">
+            <h2 className="text-3x1 front-semibold mb-4">Resume</h2>
+            <p>
+              Please find my resume here: <a href="https://docs.google.com/document/d/1U0pAK9Bzjqng77RpPlLc0M1RxvN5Zx7o/edit?usp=sharing&ouid=112777807805300324850&rtpof=true&sd=true">Full-Stack Developer</a>
+            </p>
+          </section>
+
           {/* Spotlight Section */}
           <section className="my-8">
             <h2 className="text-3xl font-semibold mb-4">Spotlight</h2>
